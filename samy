@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lycée Sidi-Ali Lebher - Béjaïa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            height: 60vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .club-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .active-link {
+            border-bottom: 2px solid #3b82f6;
+            color: #3b82f6;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-image {
+                height: 50vh;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <img src="https://via.placeholder.com/50" alt="Logo" class="h-10 w-10 mr-2">
+                            <span class="font-semibold text-gray-900 text-lg">Sidi-Ali Lebher</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#home" class="py-4 px-2 text-gray-700 hover:text-blue-500 transition duration-300 nav-link active-link">Accueil</a>
+                    <a href="#about" class="py-4 px-2 text-gray-700 hover:text-blue-500 transition duration-300 nav-link">À propos</a>
+                    <a href="#news" class="py-4 px-2 text-gray-700 hover:text-blue-500 transition duration-300 nav-link">Actualités</a>
+                    <a href="#programs" class="py-4 px-2 text-gray-700 hover:text-blue-500 transition duration-300 nav-link">Filières</a>
+                    <a href="#clubs" class="py-4 px-2 text-gray-700 hover:text-blue-500 transition duration-300 nav-link">Clubs</a>
+                    <a href="#contact" class="py-4 px-2 text-gray-700 hover:text-blue-500 transition duration-300 nav-link">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-700" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden mobile-menu">
+            <ul class="">
+                <li><a href="#home" class="block text-sm px-2 py-4 hover:bg-blue-500 hover:text-white transition duration-300 nav-link-mobile active-link">Accueil</a></li>
+                <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-blue-500 hover:text-white transition duration-300 nav-link-mobile">À propos</a></li>
+                <li><a href="#news" class="block text-sm px-2 py-4 hover:bg-blue-500 hover:text-white transition duration-300 nav-link-mobile">Actualités</a></li>
+                <li><a href="#programs" class="block text-sm px-2 py-4 hover:bg-blue-500 hover:text-white transition duration-300 nav-link-mobile">Filières</a></li>
+                <li><a href="#clubs" class="block text-sm px-2 py-4 hover:bg-blue-500 hover:text-white transition duration-300 nav-link-mobile">Clubs</a></li>
+                <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-blue-500 hover:text-white transition duration-300 nav-link-mobile">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-image flex items-center justify-center">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Lycée Sidi-Ali Lebher</h1>
+            <p class="text-xl md:text-2xl text-white mb-8">Excellence académique dans un environnement bienveillant</p>
+            <a href="#about" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block">En savoir plus</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">À propos de notre lycée</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Lycée Sidi-Ali Lebher" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Notre histoire</h3>
+                    <p class="text-gray-600 mb-4">Fondé en 1985, le lycée Sidi-Ali Lebher est un établissement d'enseignement secondaire situé à Béjaïa, qui a formé des générations d'élèves avec succès.</p>
+                    
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Notre mission</h3>
+                    <p class="text-gray-600 mb-4">Nous nous engageons à fournir une éducation de qualité qui prépare nos élèves aux défis du monde moderne, tout en cultivant des valeurs humaines essentielles.</p>
+                    
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Notre environnement</h3>
+                    <p class="text-gray-600">Notre lycée offre une atmosphère conviviale et stimulante, avec des enseignants dévoués et des installations modernes pour favoriser l'épanouissement de chaque élève.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Actualités</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- News Card 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md news-card transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Portes ouvertes" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-blue-600 text-sm mb-2">15 Octobre 2023</div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Journées Portes Ouvertes</h3>
+                        <p class="text-gray-600">Venez découvrir notre établissement lors de nos journées portes ouvertes les 25 et 26 novembre.</p>
+                    </div>
+                </div>
+                
+                <!-- News Card 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md news-card transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Voyage scolaire" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-blue-600 text-sm mb-2">5 Novembre 2023</div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Voyage Scolaire à Alger</h3>
+                        <p class="text-gray-600">Nos élèves de terminale participeront à un voyage éducatif à Alger du 15 au 18 décembre.</p>
+                    </div>
+                </div>
+                
+                <!-- News Card 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md news-card transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1605&q=80" alt="Compétition sportive" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-blue-600 text-sm mb-2">20 Novembre 2023</div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Championnat Régional de Football</h3>
+                        <p class="text-gray-600">Notre équipe de football a remporté le championnat régional des lycées. Félicitations à nos joueurs!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 transition duration-300">Voir toutes les actualités →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Filières et options</h2>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-gray-800 border-b pb-2">Première année secondaire</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-2 text-blue-600">1ST1</h4>
+                        <p class="text-gray-600">Sciences et technologies - Option 1</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-2 text-blue-600">1ST2</h4>
+                        <p class="text-gray-600">Sciences et technologies - Option 2</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-2 text-blue-600">1ST3</h4>
+                        <p class="text-gray-600">Sciences et technologies - Option 3</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-2 text-blue-600">1ST4</h4>
+                        <p class="text-gray-600">Sciences et technologies - Option 4</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-2 text-blue-600">1L1</h4>
+                        <p class="text-gray-600">Lettres - Option 1</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-2 text-blue-600">1L2</h4>
+                        <p class="text-gray-600">Lettres - Option 2</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-gray-800 border-b pb-2">Deuxième année secondaire</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-2 text-blue-600">2M</h4>
+                        <p class="text-gray-600">Mathématiques</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-2 text-blue-600">2SC</h4>
+                        <p class="text-gray-600">Sciences expérimentales</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-2 text-blue-600">2MT</h4>
+                        <p class="text-gray-600">Techniques mathématiques</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-2 text-blue-600">2GE</h4>
+                        <p class="text-gray-600">Gestion et économie</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-2 text-blue-600">2LE</h4>
+                        <p class="text-gray-600">Lettres et langues étrangères</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-2 text-blue-600">2LPH</h4>
+                        <p class="text-gray-600">Lettres et philosophie</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-semibold mb-6 text-gray-800 border-b pb-2">Terminale</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-2 text-blue-600">3M</h4>
+                        <p class="text-gray-600">Mathématiques</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-2 text-blue-600">3SC</h4>
+                        <p class="text-gray-600">Sciences expérimentales</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-2 text-blue-600">3MT</h4>
+                        <p class="text-gray-600">Techniques mathématiques</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-2 text-blue-600">3GE</h4>
+                        <p class="text-gray-600">Gestion et économie</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-2 text-blue-600">3LE</h4>
+                        <p class="text-gray-600">Lettres et langues étrangères</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-2 text-blue-600">3LPH</h4>
+                        <p class="text-gray-600">Lettres et philosophie</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clubs Section -->
+    <section id="clubs" class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Clubs et activités</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Club 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md club-card transition duration-300">
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Club Théâtre" class="w-full h-full object-cover transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Club Théâtre</h3>
+                        <p class="text-gray-600 mb-4">Développez votre créativité et votre confiance en vous à travers l'art dramatique.</p>
+                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Lundi, 16h-18h</span>
+                    </div>
+                </div>
+                
+                <!-- Club 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md club-card transition duration-300">
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Club Informatique" class="w-full h-full object-cover transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Club Informatique</h3>
+                        <p class="text-gray-600 mb-4">Initiation à la programmation, robotique et développement web pour les passionnés de tech.</p>
+                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Mardi, 15h-17h</span>
+                    </div>
+                </div>
+                
+                <!-- Club 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md club-card transition duration-300">
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Club Sport" class="w-full h-full object-cover transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Club Sport</h3>
+                        <p class="text-gray-600 mb-4">Football, basket, volley et athlétisme pour garder la forme et développer l'esprit d'équipe.</p>
+                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Mercredi, 14h-16h</span>
+                    </div>
+                </div>
+                
+                <!-- Club 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md club-card transition duration-300">
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Club Musique" class="w-full h-full object-cover transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Club Musique</h3>
+                        <p class="text-gray-600 mb-4">Apprentissage d'instruments, chorale et création musicale pour les mélomanes.</p>
+                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Jeudi, 16h-18h</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 transition duration-300">Voir tous les clubs →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contactez-nous</h2>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Adresse email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition duration-300">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm h-full">
+                        <h3 class="text-xl font-semibold mb-6 text-gray-800">Informations de contact</h3>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-800">Adresse</h4>
+                                <p class="text-gray-600">Sidi-Ali Lebher, Béjaïa, Algérie</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-phone-alt text-blue-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-800">Téléphone</h4>
+                                <p class="text-gray-600">+213 XX XX XX XX XX</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-800">Email</h4>
+                                <p class="text-gray-600">contact@sidialilebher.edu.dz</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="text-lg font-medium text-gray-800 mb-4">Nous trouver</h4>
+                            <div class="aspect-w-16 aspect-h-9">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102372.3965814471!2d4.988105!3d36.7537693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128da3f3c0c1a1e5%3A0x3cb4b1cb1a1a7e9!2sB%C3%A9ja%C3%AFa!5e0!3m2!1sfr!2sdz!4v1689876543210" class="w-full h-64 rounded-lg" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Lycée Sidi-Ali Lebher</h3>
+                    <p class="text-gray-400">Un établissement d'excellence au service de la réussite de ses élèves depuis 1985.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liens rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Accueil</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">À propos</a></li>
+                        <li><a href="#news" class="text-gray-400 hover:text-white transition duration-300">Actualités</a></li>
+                        <li><a href="#programs" class="text-gray-400 hover:text-white transition duration-300">Filières</a></li>
+                        <li><a href="#clubs" class="text-gray-400 hover:text-white transition duration-300">Clubs</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <address class="not-italic text-gray-400">
+                        <p>Sidi-Ali Lebher, Béjaïa</p>
+                        <p class="mt-2">Tél: +213 XX XX XX XX XX</p>
+                        <p class="mt-2">Email: contact@sidialilebher.edu.dz</p>
+                    </address>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Réseaux sociaux</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-xl"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="mt-6">
+                        <h5 class="text-sm font-semibold mb-2">NEWSLETTER</h5>
+                        <div class="flex">
+                            <input type="email" placeholder="Votre email" class="px-3 py-2 bg-gray-700 text-white rounded-l-md focus:outline-none w-full">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700 transition duration-300"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Lycée Sidi-Ali Lebher. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                
+                // Update active link
+                document.querySelectorAll('.nav-link, .nav-link-mobile').forEach(link => {
+                    link.classList.remove('active-link');
+                });
+                
+                this.classList.add('active-link');
+            });
+        });
+        
+        // Update active link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const scrollPosition = window.scrollY;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-link, .nav-link-mobile').forEach(link => {
+                        link.classList.remove('active-link');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active-link');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
