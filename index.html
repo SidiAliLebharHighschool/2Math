@@ -26,8 +26,25 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
-        .club-card:hover img {
-            transform: scale(1.05);
+        main {
+    text-align: center;
+    padding: 20px;
+        }
+
+        table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+        }
+
+        th, td {
+    text-align: left;
+    padding: 8px;
+        }
+
+        tr:nth-child(even) {
+background-color: #d6eeee;
         }
         
         .active-link {
@@ -60,7 +77,7 @@
                     <a href="#about" class="py-4 px-2 text-gray-700 hover:text-blue-500 transition duration-300 nav-link">À propos</a>
                     <a href="#news" class="py-4 px-2 text-gray-700 hover:text-blue-500 transition duration-300 nav-link">Actualités</a>
                     <a href="#programs" class="py-4 px-2 text-gray-700 hover:text-blue-500 transition duration-300 nav-link">Filières</a>
-                    <a href="#clubs" class="py-4 px-2 text-gray-700 hover:text-blue-500 transition duration-300 nav-link">Clubs</a>
+                    <a href="#profs" class="py-4 px-2 text-gray-700 hover:text-blue-500 transition duration-300 nav-link">profs</a>
                     <a href="#contact" class="py-4 px-2 text-gray-700 hover:text-blue-500 transition duration-300 nav-link">Contact</a>
                 </div>
                 <div class="md:hidden flex items-center">
@@ -78,7 +95,7 @@
                 <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-blue-500 hover:text-white transition duration-300 nav-link-mobile">À propos</a></li>
                 <li><a href="#news" class="block text-sm px-2 py-4 hover:bg-blue-500 hover:text-white transition duration-300 nav-link-mobile">Actualités</a></li>
                 <li><a href="#programs" class="block text-sm px-2 py-4 hover:bg-blue-500 hover:text-white transition duration-300 nav-link-mobile">Filières</a></li>
-                <li><a href="#clubs" class="block text-sm px-2 py-4 hover:bg-blue-500 hover:text-white transition duration-300 nav-link-mobile">Clubs</a></li>
+                <li><a href="#profs" class="block text-sm px-2 py-4 hover:bg-blue-500 hover:text-white transition duration-300 nav-link-mobile">profs</a></li>
                 <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-blue-500 hover:text-white transition duration-300 nav-link-mobile">Contact</a></li>
             </ul>
         </div>
@@ -259,64 +276,294 @@
         </div>
     </section>
 
-    <!-- Clubs Section -->
-    <section id="clubs" class="py-16 bg-gray-100">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Clubs et activités</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Club 1 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md club-card transition duration-300">
-                    <div class="overflow-hidden h-48">
-                        <img src="https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Club Théâtre" class="w-full h-full object-cover transition duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">Club Théâtre</h3>
-                        <p class="text-gray-600 mb-4">Développez votre créativité et votre confiance en vous à travers l'art dramatique.</p>
-                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Lundi, 16h-18h</span>
-                    </div>
-                </div>
-                
-                <!-- Club 2 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md club-card transition duration-300">
-                    <div class="overflow-hidden h-48">
-                        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Club Informatique" class="w-full h-full object-cover transition duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">Club Informatique</h3>
-                        <p class="text-gray-600 mb-4">Initiation à la programmation, robotique et développement web pour les passionnés de tech.</p>
-                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Mardi, 15h-17h</span>
-                    </div>
-                </div>
-                
-                <!-- Club 3 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md club-card transition duration-300">
-                    <div class="overflow-hidden h-48">
-                        <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Club Sport" class="w-full h-full object-cover transition duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">Club Sport</h3>
-                        <p class="text-gray-600 mb-4">Football, basket, volley et athlétisme pour garder la forme et développer l'esprit d'équipe.</p>
-                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Mercredi, 14h-16h</span>
-                    </div>
-                </div>
-                
-                <!-- Club 4 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md club-card transition duration-300">
-                    <div class="overflow-hidden h-48">
-                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Club Musique" class="w-full h-full object-cover transition duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">Club Musique</h3>
-                        <p class="text-gray-600 mb-4">Apprentissage d'instruments, chorale et création musicale pour les mélomanes.</p>
-                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Jeudi, 16h-18h</span>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-12">
-                <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 transition duration-300">Voir tous les clubs →</a>
-            </div>
-        </div>
-    </section>
+    <!-- profs Section -->
+ <main>
+        <h2>Planning des professeurs</h2>
+        <table>
+            <tr>
+                <th>Nom & Prénom</th>
+                <th>Matière</th>
+                <th>Jour de réception</th>
+                <th>Heure</th>
+            </tr>
+            <tr>
+                <td>Mme. Asema Kafia</td>
+                <td>Mathématiques</td>
+                <td>Lundi</td>
+                <td>10h - 12h</td>
+            </tr>
+            <tr>
+                <td>Mme.</td>
+                <td>Mathématiques</td>
+                <td>Mercredi</td>
+                <td>14h - 16h</td>
+            </tr>
+            <tr>
+                <td>Mr. Tani Saleh</td>
+                <td>Mathématiques</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Djelouli Njima</td>
+                <td>Mathématiques</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Ahmime Yamina</td>
+                <td>Mathématiques</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Aboud Hayat</td>
+                <td>Physique</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mr. Berghel Omar</td>
+                <td>Physique</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mr. Mseroua Abdelmalek</td>
+                <td>Physique</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mr. Zbicha Ahmed</td>
+                <td>Physique</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mr. Mikhaldi Imad</td>
+                <td>Science</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Ziani Sabrina</td>
+                <td>Science</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Yousfi Fadia</td>
+                <td>Science</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Ouali Katia</td>
+                <td>Economie</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Arab Kahina</td>
+                <td>Economie</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Mekhlouf Farah</td>
+                <td>Arabe</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mr. Mourad Jamel</td>
+                <td>Arabe</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Mhenna Zakia</td>
+                <td>Arabe</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Blimane Wahida</td>
+                <td>Arabe</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Goumeziane Wafa</td>
+                <td>Arabe</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Heddadi Narimane</td>
+                <td>Français</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Odak Nassima</td>
+                <td>Français</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Saou Lamia</td>
+                <td>Français</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mr. Mezhoud Hamza</td>
+                <td>Français</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Halfoun Farida</td>
+                <td>Anglais</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Dali Dalila</td>
+                <td>Anglais</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Bekouche Laila</td>
+                <td>Anglais</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Mellali Siham</td>
+                <td>Anglais</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Zerrari Zakia</td>
+                <td>Tamazight</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Ameziane Sabrina</td>
+                <td>Tamazight</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Beqqa Dalila</td>
+                <td>Tamazight</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Saidi Kahina</td>
+                <td>Tamazight</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mr. Laariche Abdelaziz</td>
+                <td>Espagnol</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Khalfi Leila</td>
+                <td>Philosophie</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mr. Goujil Yahya</td>
+                <td>Philosophie</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Nasri Hajira</td>
+                <td>His/Géo</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Bensafia Samia</td>
+                <td>His/Géo</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Rbiha Firouz</td>
+                <td>His/Géo</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mr. Amouche Azeddine</td>
+                <td>His/Géo</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Fermas Fatima</td>
+                <td>Science Islamique</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mr. </td>
+                <td>Science Islamique</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Ouari Sakina</td>
+                <td>Génie Éléctrique</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mr. Mlihi Said</td>
+                <td>Génie Éléctrique</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Gouiri Nadia</td>
+                <td>Informatique</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mr. Daoud Soufiane</td>
+                <td>EPS</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mme. Chabou Malika</td>
+                <td>EPS</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+            <tr>
+                <td>Mr. Berchouche Jamel</td>
+                <td>EPS</td>
+                <td>Lundi</td>
+                <td>09h - 11h</td>
+            </tr>
+        </table>
+    </main>
 
     <!-- Contact Section -->
     <section id="contact" class="py-16 bg-white">
@@ -403,7 +650,7 @@
                         <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">À propos</a></li>
                         <li><a href="#news" class="text-gray-400 hover:text-white transition duration-300">Actualités</a></li>
                         <li><a href="#programs" class="text-gray-400 hover:text-white transition duration-300">Filières</a></li>
-                        <li><a href="#clubs" class="text-gray-400 hover:text-white transition duration-300">Clubs</a></li>
+                        <li><a href="#profs" class="text-gray-400 hover:text-white transition duration-300">profs</a></li>
                         <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
                     </ul>
                 </div>
